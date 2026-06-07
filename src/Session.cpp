@@ -180,7 +180,7 @@ void Session::run()
         // 2026.5.31 update  告诉ftp服务器我支持看文件的大小(拓展功能)                                                               
         else if(strcmp(buf,"FEAT")==0)                                   
         {                                                                
-            const char* msg = "211-Features:\r\n SIZE\r\n 211 End\r\n";  
+            const char* msg = "211-Features:\r\n SIZE\r\n211 End\r\n";  
             send(_ClientFd,msg,strlen(msg),0);                           
         }
         
